@@ -1,14 +1,4 @@
-I wrote nine programs in my intro to programming class. 
-I decided to go back rewrite all of the programs using everything 
-I've learned so far. 
+I wrote nine programs in my intro to programming class. I planned to rewrite these at some point, but I've focused on other projects instead. I believe all of the programs except Program 7 & 8 compile correctly. I need to go back remove some of the bugs in those programs.
 
-TDL:
-1-Program 1
-2-Program 2
-3-Program 3
-4-Program 4
-5-Program 5
-6-Program 6
-7-Program 7 
-8-Program 8
-9-Make-up Program 
+I am currently working on increasing my back end development skills. I am currently working on a project using Python Flask and MariaDB. Further commits to come soon
+
