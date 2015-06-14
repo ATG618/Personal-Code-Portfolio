@@ -1,0 +1,9 @@
+-- Create two new tables in test database, display database structure
+CREATE TABLE test.contacts (name CHAR(30), phone_work CHAR(12), phone_mobile CHAR(12),
+email CHAR(120), relation_id INT
+);
+CREATE TABLE test.relation_types (relation_id INT, relationship CHAR(30)
+);
+DESCRIBE contacts;
+DESCRIBE relation_types;
+
