@@ -1,0 +1,14 @@
+--Using mysql dump to back up databases and specific tables:
+
+--Change directory to desired backup location
+cd "path"
+
+--To Back Up Complete Database
+mysqldump --user='username' -p rookery > rookery.sql
+
+--To Back Up Database Specific Table
+mysqldump --user='username' -p rookery birds > birds.sql
+
+--Make a backup of databas before changes
+--To recover database
+mysql --user='username' -p rookery < rookery-ch2-end.sql

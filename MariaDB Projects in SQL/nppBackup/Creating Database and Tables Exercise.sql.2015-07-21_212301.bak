@@ -1,0 +1,23 @@
+--Create database rookery
+CREATE DATABASE rookery;
+
+--Drop database rookery
+DROP DATABASE rookery;
+
+-- Create database rookery
+CREATE DATABASE rookery
+CHARACTER SET latin1
+COLLATE latin1_bin;
+
+--show all databases
+SHOW DATABASES;
+
+--Create birds table
+CREATE TABLE birds (
+    bird_id INT AUTO_INCREMENT PRIMARY KEY
+    scientific_name VARCHAR(255) UNIQUE
+    common_name VARCHAR(50)
+    family_id INT
+    description TEXT
+);
+

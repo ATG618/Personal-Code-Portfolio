@@ -1,0 +1,46 @@
+--Altering Tables Chapter
+
+--Using mysql dump to back up databases and specific tables:
+
+--Change directory to desired backup location
+cd "path"
+
+--To Back Up Complete Database
+mysqldump --user='username' -p rookery > rookery.sql
+
+--To Back Up Database Specific Table
+mysqldump --user='username' -p rookery birds > birds.sql
+
+--Make a backup of databas before changes
+--To recover database
+mysql --user='username' -p rookery < rookery-ch2-end.sql
+
+--Alter table to add columns
+ALTER TABLE bird_families ADD COLUMN order_id INT;
+
+--Add columns to test database:
+CREATE TABLE test.birds_new LIKE birds;
+
+--switch database and view structure
+USE Test DESCRIBE birds_new;
+
+--insert data into a copied table with no data
+INSERT INTO birds_new
+SELECT * FROM rookery.birds;
+
+--Alternative method to insert data into copied table with no data
+CREATE TABLE birds_new_alternative
+SELECT * FROM rookery.birds;
+
+--Add column to table
+ALTER TABLE birds_new
+ADD COLUMN wing_id CHAR(2);
+
+---Delete a column from table
+ALTER TABLE birds_new
+DROP COLUMN wing_id;
+
+--Add a column to table to specific location
+ALTER TABLE birds_new
+ADD COLUMN wing_id CHAR(2) AFTER family_id;
+

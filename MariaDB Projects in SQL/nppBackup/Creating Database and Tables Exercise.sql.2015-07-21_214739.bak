@@ -1,0 +1,54 @@
+--Create database rookery
+CREATE DATABASE rookery;
+
+--Drop database rookery
+DROP DATABASE rookery;
+
+-- Create database rookery
+CREATE DATABASE rookery
+CHARACTER SET latin1
+COLLATE latin1_bin;
+
+--show all databases
+SHOW DATABASES;
+
+--Create birds table
+CREATE TABLE birds (
+    bird_id INT AUTO_INCREMENT PRIMARY KEY
+    scientific_name VARCHAR(255) UNIQUE
+    common_name VARCHAR(50)
+    family_id INT
+    description TEXT
+);
+
+--Insert Data into Birds Table
+INSERT INTO birds (scientific_name, common_name)
+VALUES ('Charadrius vociferus','Killdeer'),
+    ('Gavia immer','Great Northern Loon'),
+    ('Aix sponsa','Wood Duck'),
+    ('Chordeiles minor','Common Nighthawk'),
+    ('Sitta carolinensis','White-breasted Nuthatch'),
+    ('Apteryx mantelli', 'North Island Brown Kiwi');
+    
+--Select data from table
+SELECT * FROM birds;
+
+--Create database birdwatchers
+CREATE DATABASE birdwatchers;
+
+--Create table in birdwatchers
+CREATE TABLE birdwatchers.humans(
+    human_id INT AUTO_INCREMENT PRIMARY KEY,
+    formal_title VARCHAR(25),
+    name_first VARCHAR(25),
+    name_last VARCHAR(25),
+    email_address VARCHAR(255)
+);
+
+--Add sample data to humans table
+INSERT INTO birdwatchers.humans(name_first, name_last, email_address)
+    VALUES
+    ('Mr.', 'Russell', 'Dyer', 'russell@email.com'),
+    ('Mr.', 'Richard', 'Stringer', 'richard@email.com'),
+    ('Ms.', 'Rusty', 'Osborne', 'rusty@email.com'),
+    ('Ms.', 'Lexi', 'Hollar', 'alexandra@email.com');
